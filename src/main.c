@@ -25,7 +25,7 @@ int main(void)
      pwm_tpm_Ch_Init(TPM2, 0, TPM_PWM_H, GPIOB, 18);
      pwm_tpm_Ch_Init(TPM2, 1, TPM_PWM_H, GPIOB, 19);
      pwm_tpm_Ch_Init(TPM1, 0, TPM_PWM_H, GPIOB, 0);
-     //pwm_tpm_Ch_Init(TPM1, 1, TPM_PWM_H, GPIOE, 21);
+     pwm_tpm_Ch_Init(TPM1, 1, TPM_PWM_H, GPIOE, 21);
     // Define o valor do duty cycle: nesse caso, duty_100 (LED quase desligado)
    
     // Loop infinito
@@ -34,13 +34,13 @@ int main(void)
     pwm_tpm_CnV(TPM2, 1, 1000);
     pwm_tpm_CnV(TPM2, 0, 1000);
     pwm_tpm_CnV(TPM1, 0, 1000);
-    //pwm_tpm_CnV(TPM1, 1, 1000);
+    pwm_tpm_CnV(TPM1, 1, 1000);
     k_msleep(2000);
 
     pwm_tpm_CnV(TPM2, 1, 0);
     pwm_tpm_CnV(TPM2, 0, 0);
     pwm_tpm_CnV(TPM1, 0, 0);
-    //pwm_tpm_CnV(TPM1, 1, 0);
+    pwm_tpm_CnV(TPM1, 1, 0);
     k_msleep(2000);
 
         // O programa poderia alterar o duty cycle dinamicamente aqui se desejado

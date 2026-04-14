@@ -1,1 +1,1 @@
-carrinho girando com apenas 1 roda
+carrinho girando com ambas as rodas 
