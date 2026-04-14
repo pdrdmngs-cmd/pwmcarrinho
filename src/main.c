@@ -22,7 +22,7 @@ int main(void)
     //pwm_tpm_Init(TPM1, TPM_PLLFLL, TPM_MODULE, TPM_CLK, PS_128, EDGE_PWM);
     // Inicializa o canal 0 do TPM2 para gerar sinal PWM na porta GPIOB_18
     // - modo TPM_PWM_H (nível alto durante o pulso)
-    //pwm_tpm_Ch_Init(TPM2, 0, TPM_PWM_H, GPIOB, 18);
+     pwm_tpm_Ch_Init(TPM2, 0, TPM_PWM_H, GPIOB, 18);
      pwm_tpm_Ch_Init(TPM2, 1, TPM_PWM_H, GPIOB, 19);
     //pwm_tpm_Ch_Init(TPM1, 0, TPM_PWM_H, GPIOB, 0);
     //pwm_tpm_Ch_Init(TPM1, 1, TPM_PWM_H, GPIOE, 21);
@@ -32,13 +32,13 @@ int main(void)
     for (;;)
     { 
     pwm_tpm_CnV(TPM2, 1, 1000);
-    //pwm_tpm_CnV(TPM2, 0, 0);
+    pwm_tpm_CnV(TPM2, 0, 1000);
     //pwm_tpm_CnV(TPM1, 0, 1000);
     //pwm_tpm_CnV(TPM1, 1, 1000);
     k_msleep(2000);
 
     pwm_tpm_CnV(TPM2, 1, 0);
-    //pwm_tpm_CnV(TPM2, 0, 0);
+    pwm_tpm_CnV(TPM2, 0, 0);
     //pwm_tpm_CnV(TPM1, 0, 0);
     //pwm_tpm_CnV(TPM1, 1, 0);
     k_msleep(2000);
