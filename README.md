@@ -1,1 +1,1 @@
-led verde piscando 1s
+led verde piscando 2s
