@@ -35,13 +35,13 @@ int main(void)
     //pwm_tpm_CnV(TPM2, 0, 1000);
     //pwm_tpm_CnV(TPM1, 0, 1000);
     //pwm_tpm_CnV(TPM1, 1, 1000);
-    k_msleep(1000);
+    k_msleep(2000);
 
     pwm_tpm_CnV(TPM2, 1, 0);
     //pwm_tpm_CnV(TPM2, 0, 0);
     //pwm_tpm_CnV(TPM1, 0, 0);
     //pwm_tpm_CnV(TPM1, 1, 0);
-    k_msleep(1000);
+    k_msleep(2000);
 
         // O programa poderia alterar o duty cycle dinamicamente aqui se desejado
     }
