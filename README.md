@@ -1,1 +1,1 @@
-Led piscante laranja
+led piscante verde 1s
